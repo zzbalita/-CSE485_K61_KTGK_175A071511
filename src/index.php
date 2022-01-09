@@ -72,6 +72,7 @@
                             <th>Phòng ban</th>
                             <th>Lương</th>
                             <th>Ngày vào làm</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,6 +87,10 @@
                                 <td><?php echo $row['phongban']; ?></td>
                                 <td><?php echo $row['luong']; ?></td>
                                 <td><?php echo $row['ngayvaolam']; ?></td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
                             </tr>
                             <?php $stt++; ?>
                         <?php endwhile; ?>
@@ -109,6 +114,17 @@
     <?php include("view/addemployee.html"); ?>
     <?php include("view/editemployee.html"); ?>
     <?php include("view/deleteemployee.html"); ?>
+    <script>
+        document.getElementById('addEmployee').onclick = function() {
+            alert("Button Add pressed!");
+        }
+        document.getElementById('editEmployee').onclick = function() {
+            alert("Button Edit pressed!");
+        }
+        document.getElementById('deleteEmployee').onclick = function() {
+            alert("Button Delete pressed!");
+        }
+    </script>
 </body>
 
 </html>
